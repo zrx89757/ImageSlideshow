@@ -173,7 +173,7 @@ class ZoomAnimator: NSObject {
 class ZoomInAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.5
+        return 0.25
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -206,7 +206,7 @@ class ZoomInAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
         var transitionViewFinalFrame = finalFrame
         if let referenceImageView = referenceImageView {
             transitionView = UIImageView(image: referenceImageView.image)
-            transitionView!.contentMode = UIViewContentMode.scaleAspectFill
+            transitionView!.contentMode = .scaleAspectFit
             transitionView!.clipsToBounds = true
             transitionView!.frame = containerView.convert(referenceImageView.bounds, from: referenceImageView)
             containerView.addSubview(transitionView!)
