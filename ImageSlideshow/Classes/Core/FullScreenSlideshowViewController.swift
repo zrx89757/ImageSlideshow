@@ -78,7 +78,7 @@ open class FullScreenSlideshowViewController: UIViewController {
     }
 
     override open var prefersStatusBarHidden: Bool {
-        return true
+        return false
     }
 
     override open func viewWillAppear(_ animated: Bool) {
