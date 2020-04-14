@@ -237,19 +237,6 @@ class ZoomInAnimator: ZoomAnimator, UIViewControllerAnimatedTransitioning {
             containerView.addSubview(toViewController.view)
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
-        
-//        UIView.animate(withDuration: duration, delay:0, usingSpringWithDamping:0.7, initialSpringVelocity:0, options: UIViewAnimationOptions.curveLinear, animations: {
-//            fromViewController.view.alpha = 0
-//            transitionView?.frame = transitionViewFinalFrame
-//            transitionView?.center = CGPoint(x: finalFrame.midX, y: finalFrame.midY)
-//        }, completion: {[ref = self.referenceImageView] _ in
-//            fromViewController.view.alpha = 1
-//            ref?.alpha = 1
-//            transitionView?.removeFromSuperview()
-//            transitionBackgroundView.removeFromSuperview()
-//            containerView.addSubview(toViewController.view)
-//            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-//        })
     }
 }
 
